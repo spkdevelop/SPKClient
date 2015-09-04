@@ -46,7 +46,7 @@ def replace_variable(lines,string,variable):
     for i in range(len(lines)):
         while string in lines[i]:
             
-            lines[i]=lines[i].replace(string,variable)
+            lines[i]=lines[i].replace(string,str(variable))
     return lines
 def clean_line(line):
     return re.sub('\s|\(.*?\)','',line).upper() #magicamente esto quita comentarios, espacios y pone mayusculas
