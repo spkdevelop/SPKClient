@@ -15,7 +15,6 @@ Descarga el ZIP <a href="https://github.com/utitankaspk/SPKClient/archive/master
 	Descomprime el ZIP en la carpeta.<br>
 	<span style="margin:50px;color:rgb(50,50,50);">Debe contener los archivos main.py, start.py ,cutter.py en primer nivel.</span> <br>
 	Abre una terminal. Después copia y pega sin comillas los siguientes comandos:<br><br>
-
   <i>"sudo apt-get -y libqt4-dev libpng-dev python-qt4 libxtst-dev xvfb x11-xkb-utils python-dev python-setuptools python-pip "<br></i>
 	<i>"sudo pip install spynner"</i><br>
 
