@@ -1,89 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Spkclient by utitankaspk</title>
+    <meta name="description" content="Spkclient : Cliente para conectar una CNC con electrónica GRBL o TinyG con la nube de SPK:.">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Spkclient</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Spkclient</h1>
-        <p>Cliente para conectar una CNC con electrónica GRBL o TinyG con la nube de SPK:.</p>
 
-        <p class="view"><a href="https://github.com/utitankaspk/SPKClient">View the Project on GitHub <small>utitankaspk/SPKClient</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/spkdevelop/SPKClient">View on GitHub</a>
 
+          <h1 id="project_title">Spkclient</h1>
+          <h2 id="project_tagline">Cliente para conectar una CNC con electrónica GRBL o TinyG con la nube de SPK:.</h2>
 
-        <ul>
-          <li><a href="https://github.com/utitankaspk/SPKClient/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/utitankaspk/SPKClient/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/utitankaspk/SPKClient">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a id="cliente-cnc" class="anchor" href="#cliente-cnc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cliente CNC</h3>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/spkdevelop/SPKClient/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/spkdevelop/SPKClient/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-<p>Para poder crear un nuevo taller es necesario crear un vínculo entre el servidor y la computadora que va a controlar la CNC.
-Una vez establecida la conexión, podrás subir tus propios archivos a la nube, ya sea manualmente o utilizando nuestro plugin de Rhino5 <a href="http://www.spkautomatizacion.com/item/ivdT28PCa">SPKCAM</a>.</p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="spkclient" class="anchor" href="#spkclient" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spkclient</h1>
+
+<p>Script que te permite controlar por red local o remota maquinaria CNC desde la plataforma de <a href="http://www.spkautomatizacion.com">http://www.spkautomatizacion.com</a> .</p>
+
+<h3>
+<a id="plataforma" class="anchor" href="#plataforma" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plataforma</h3>
+
+<p>Para poder crear un nuevo taller es necesario crear un vínculo entre el servidor y la computadora que va a controlar la CNC. Una vez establecida la conexión, podrás subir tus propios archivos a la nube, ya sea manualmente o utilizando nuestro plugin de Rhino5 <a href="https://spkdevelop.github.io/SPKCAM/">SPKCAM</a>.</p>
 
 <p>Necesitas tener una CNC con sistema de control 
 <a href="https://github.com/synthetos/TinyG">TinyG</a> o <a href="https://github.com/grbl/grbl">GRBL</a>.
 Todas nuestras CNCs pre ensambladas tienen este sistema de control es popular entre 
 muchas otras marcas como <a href="https://www.shapeoko.com">Shapeoko</a> y <a href="https://www.inventables.com/technologies/x-carve">XCarve</a>.</p>
 
-<p>El cliente está diseñado para funcionar en una RaspberryPi, sin embargo, puede correr en cualquier computadora con sistema operativo linux.
-Te recomenadamos comprar una <a href="https://github.com/grbl/grbl">RaspberryPi</a> con nuestro cliente previamente instalado o seguir las siguientes instrucciones para hacerlo tú mismo.</p> 
+<p>El cliente está diseñado para funcionar en una RaspberryPi, sin embargo, puede correr en cualquier computadora con sistema operativo linux.</p>
+
+<p>Te recomenadamos contactar al equipo de SPK para solicitar una instalanción en planta.</p> 
 
 <h3>
-<a id="descarga-e-instala-el-cliente-en-ubuntu-o-raspbian" class="anchor" href="#descarga-e-instala-el-cliente-en-ubuntu-o-raspbian" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Descarga e instala el cliente en <a href="http://www.ubuntu.com/download/desktop">Ubuntu</a> o <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>
-</h3>
+<a id="instalación" class="anchor" href="#instalaci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instalación</h3>
 
-<p>Estas instrucciones suponen que ya cuentas con un sistema operativo linux Ubuntu. Todavía tenemos que instalar dos dependecias previas a correr el script: xvfb-run y python-spynner. Revisa nuestra proyecto en <a href="https://github.com/utitankaspk/SPKClient">GitHub</a> para más información.</p>
+<h4>
+<a id="requerimientos" class="anchor" href="#requerimientos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requerimientos</h4>
 
-<p>Descarga el ZIP <a href="https://github.com/utitankaspk/SPKClient/archive/master.zip">SPKClient-master.zip</a>.<br>
-    Crea una nueva carpeta en el escritorio llamada SPKClient-master.<br>
-    Descomprime el ZIP en la carpeta.<br>
-    Debe contener los archivos main.py, start.py ,cutter.py en primer nivel. <br>
-    Abre una terminal. Después copia y pega sin comillas los siguientes comandos:<br><br>
-  <i>"sudo apt-get -y libqt4-dev libpng-dev python-qt4 libxtst-dev xvfb x11-xkb-utils python-dev python-setuptools python-pip "<br></i>
-    <i>"sudo pip install spynner"</i><br></p>
+<p>OS: Linux Debian (ubuntu, raspbian)<br>
+CPU: &gt; 1000mhz<br>
+Conexión Internet<br>
+Cable Ethernet (Solo para configurar el WiFi en RPI)<br></p>
 
-<p>Ve a la carpeta donde colocaste los archivos de SPKClient y ejecuta el script con el identificador de usuario y máquina.<br><br>
-    <i>"cd /home/tuusuarioaqui/Desktop/CNC" </i><br><br>
-     También puedes escribir <i>"cd" </i> y arrastra la carpeta de SPKClient a la terminal.<br>
-    Llena el formato de Nueva CNC al inicio de la página y copia y pega el código generado en tu terminal.<br><br>
-    Ejemplo:<br><br>
-    <i>sudo xvfb-run python main.py "JTdCJTIyZW1haWwlMjI6JTIyZGFuaWVsQHNwa2F1d<br>
-    G9tYXRpemFjaW9uLmNvbSUyMiwlMjJ3b3Jrc2hvcF9pZCUyMjolMjJhZ3B6Zm5Od2EyTnNiM1ZrY2hVTE<br>
-    VnaFhiM0pyYzJodmNCaUFnSUNBd0t1R0NndyUyMiwlMjJuZXdfd29ya3Nob3BfbmFtZSUyMjolMjIlMjI<br>
-    sJTIyY25jX25hbWUlMjI6JTIyZGFuaWVsJTIyJTdE"<br><br>
-    </i>
-    El script se debe ejecutar con el comando <i>"sudo xvfb-run python main.py"</i> y el código de usuario que identifica el cliente con el usuario dentro del servidor. Éste sólo se necesita la primera vez que se ejecuta el script.<br>
-    <br>
-    </p>
+<h4>
+<a id="ejecución" class="anchor" href="#ejecuci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ejecución</h4>
 
-<p>Si el script se ejecutó con éxito, aparecerá el nombre del taller que acabas de crear en el menú de talleres, en la barra superior. Si el script del cliente se ejecutó correctamente y no aparece en la barra, reinicia la página.
-Si tienes problemas, no dudes en contactarnos.</p>
+<p>Para correr el script hay que ejecutar el siguiente comando desde la consola:</p>
 
-<p><a href="mailto:daniel@spkautomatizacion.com?Subject=SPK%20Client">Programación SPK:.</a></p>
+<pre><code>sudo python start.py
+</code></pre>
 
-<p>
-</p>
+<p>La primera vez que se ejecuta el programa este tratata de actualizar e instalar las dependencias necesarias. La instalación puede tardar unos minutos. <br></p>
+
+<p>Si el programa marca error, se pueden instalar las dependencias manualmente y volver a correr el comando.</p>
+
+<h4>
+<a id="instalación-manual-dependencias" class="anchor" href="#instalaci%C3%B3n-manual-dependencias" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instalación manual dependencias</h4>
+
+<pre><code>sudo apt-get install -y libqt4-dev libxml2-dev libxslt1-dev  python-qt4  libxtst-dev xvfb x11-xkb-utils python-dev python-setuptools python-pip
+sudo pip install pbkdf2 pyserial spynner
+</code></pre>
+
+<h3>
+<a id="problemas" class="anchor" href="#problemas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problemas</h3>
+
+<p>Si la consola sigue arrojando errores despues de instalar las dependencias manualamente trate con el siguiente comando:</p>
+
+<pre><code>sudo xvfb-run python main.py
+</code></pre>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/utitankaspk">utitankaspk</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Spkclient maintained by <a href="https://github.com/spkdevelop">spkdevelop</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
